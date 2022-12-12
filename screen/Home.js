@@ -5,6 +5,7 @@ import Menuitems from "../components/Menuitems";
 import Product from "../components/Product";
 import Productlist from "../components/Productlist";
 import Nav from "../components/Nav";
+import BottomNavigator from "../components/BottomNav";
 import SearchBar from "../components/Searchbar";
 import Location from "../components/Location";
 
@@ -232,6 +233,7 @@ function Home(){
 
           {/* navigation */}
           <Nav/>
+          {/* <BottomNavigator/> */}
       </View>
     )
 }
