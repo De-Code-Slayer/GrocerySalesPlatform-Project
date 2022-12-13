@@ -31,10 +31,11 @@ const DATA = [
 
 const styles = StyleSheet.create({
   productbox: {
-    backgroundColor:"pink",
+    backgroundColor:"#f9f9f9",
     width: Dimensions.get('window').width * 0.9,
     alignItems: "center",
-    marginTop:10
+    marginTop:10,
+    
     
   },
 });
