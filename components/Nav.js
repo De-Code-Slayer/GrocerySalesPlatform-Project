@@ -1,6 +1,6 @@
 
 import {Dimensions, StyleSheet, Text, View,ScrollView, FlatList} from 'react-native';
-
+import { Feather, Ionicons,  MaterialIcons, MaterialCommunityIcons, AntDesign  } from "@expo/vector-icons";
 const circlewidth =  Dimensions.get('window').height * 0.08
 const styles = StyleSheet.create({
     // navinvisible:{
@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         marginTop:"auto",
         flexDirection:'row',
+        justifyContent:"space-between",
     },
     leftbox:{
         backgroundColor:'#0000',
@@ -47,41 +48,56 @@ shadowRadius: 4.84,
 elevation: 8,
 
     },
+
     rightbox:{
         backgroundColor:'#0000',
         height:'100%',
-        width: Dimensions.get('window').width * 0.5,
+        width: Dimensions.get('window').width * 0.4,
         marginTop:"auto",
         borderTopLeftRadius:30,
-        left:"100%",
+        
+        
+        
+        
+    },
+    rightboxinner:{
+        backgroundColor:"#0000",
+        height:'100%',
+        width: '100%',
+        borderTopLeftRadius:30,
         flexDirection:'row',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        
     },
+
     home:{
-        height:"10%",
-        width:"10%",
-        backgroundColor:"black",
+        height:"40%",
+        width:"15%",
+        alignItems: 'center',
+        justifyContent: 'center',
 
         
     },
     order:{
-        height:"10%",
-        width:"10%",
-        backgroundColor:"red",
+        height:"40%",
+        width:"15%",
+        alignItems: 'center',
+        justifyContent: 'center',
         
     },
     favorite:{
-        height:"10%",
-        width:"10%",
-        backgroundColor:"red",
+        height:"40%",
+        width:"15%",
+        alignItems: 'center',
+        justifyContent: 'center',
         
     },
     profile:{
-        height:"10%",
-        width:"10%",
-        backgroundColor:"red",
+        height:"40%",
+        width:"15%",
+
+        alignItems: 'center',
+        justifyContent: 'center',
         
     },
 
@@ -93,13 +109,15 @@ function Nav (){
  
         <View style={styles.navbox} >
             <View style={styles.leftbox}>
-                <View style={styles.home}></View>
-                <View style={styles.order}></View>
+                <View style={styles.home}><MaterialIcons name="home-filled" size={24} color="orange" /></View>
+                <View style={styles.order}><MaterialCommunityIcons name="ticket-percent-outline" size={24} color="gray" /></View>
             </View>
-            <View style={styles.centercircle}></View>
+            <View style={styles.centercircle}><Ionicons name="md-cart-outline" size={24} color="black" /></View>
             <View style={styles.rightbox}>
-                <View style={styles.favorite}></View>
-                <View style={styles.profile}></View>
+                <View  style={styles.rightboxinner}>
+                  <View style={styles.favorite}><AntDesign name="hearto" size={24} color="gray" /></View>
+                  <View style={styles.profile}><Ionicons name="ios-person-outline" size={24} color="gray" /></View>
+                </View>
             </View>
 
         </View>
