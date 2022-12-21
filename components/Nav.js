@@ -1,6 +1,7 @@
 
-import {Dimensions, StyleSheet, Text, View,ScrollView, FlatList} from 'react-native';
+import {Dimensions, StyleSheet, TouchableOpacity,Text, View,ScrollView, FlatList} from 'react-native';
 import { Feather, Ionicons,  MaterialIcons, MaterialCommunityIcons, AntDesign  } from "@expo/vector-icons";
+
 const circlewidth =  Dimensions.get('window').height * 0.08
 const styles = StyleSheet.create({
     // navinvisible:{
@@ -103,7 +104,7 @@ elevation: 8,
 
   });
 
-function Nav (){
+function Nav ( props ){
 
     return(
  
@@ -112,8 +113,11 @@ function Nav (){
                 <View style={styles.home}><MaterialIcons name="home-filled" size={24} color="orange" /></View>
                 <View style={styles.order}><MaterialCommunityIcons name="ticket-percent-outline" size={24} color="gray" /></View>
             </View>
-            <View style={styles.centercircle}><Ionicons name="md-cart-outline" size={24} color="black" /></View>
-            <View style={styles.rightbox}>
+
+
+            <TouchableOpacity style={styles.centercircle} onPress={() => props.navigation.navigate('Cart') }>
+                <Ionicons name="md-cart-outline" size={24} color="black" /></TouchableOpacity>
+                <View style={styles.rightbox}>
                 <View  style={styles.rightboxinner}>
                   <View style={styles.favorite}><AntDesign name="hearto" size={24} color="gray" /></View>
                   <View style={styles.profile}><Ionicons name="ios-person-outline" size={24} color="gray" /></View>

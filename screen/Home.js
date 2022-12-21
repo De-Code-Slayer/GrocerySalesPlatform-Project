@@ -173,7 +173,7 @@ const getOnPressItem = (data) => {
 }
 
 
-function Home(){
+function Home({ navigation }){
 
 
 
@@ -232,7 +232,7 @@ function Home(){
           <Productlist/>
 
           {/* navigation */}
-          <Nav/>
+          <Nav navigation={navigation} />
           {/* <BottomNavigator/> */}
       </View>
     )

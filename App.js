@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './screen/Home'
 import Login from './screen/Login'
+import Cart from './screen/Cart'
 
 
 // Screen Stacks
@@ -23,6 +24,8 @@ function  App(){
   }}>
         <Stack.Screen name="Login" animationEnabled={"false"} component={Login}  />
         <Stack.Screen name="Home"  animationEnabled={"false"} component={Home}  options={{ title: 'Home' }}/>
+        <Stack.Screen name="Cart"  animationEnabled={"false"} component={Cart}  options={{ title: 'Cart' }}/>
+      
       </Stack.Navigator>
     </NavigationContainer>
   
